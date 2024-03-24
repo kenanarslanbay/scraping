@@ -14,6 +14,8 @@ Before you begin, ensure you have the following installed on your system:
 ### Setting Up the Environment
 To implement the project from the beginning, run following commands:
 ```bash
+# Clone the project repository:
+git clone https://github.com/kenanarslanbay/scraping.git
 # Create virtual environment in order to run  scraping & ingestion scripts:
 python -m venv .venv
 source .venv/Scripts/activate
