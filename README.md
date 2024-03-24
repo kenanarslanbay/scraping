@@ -12,7 +12,7 @@ Before you begin, ensure you have the following installed on your system:
 ## Installation and Setup
 
 ### Setting Up the Environment
-To implement the project from the beginning, run following commands
+To implement the project from the beginning, run following commands:
 ```bash
 # Create virtual environment in order to run  scraping & ingestion scripts:
 python -m venv .venv
@@ -34,10 +34,7 @@ python python ingest_data.py
 ### Notes
 
 - Scraping implemented via API due to the complex structure of the target site(s), API calls are made where possible to efficiently retrieve data in desired formats.
-- 
 - Scraped data is initially stored temporarily for quality assurance before being ingested into the PostgreSQL database, ensuring high data integrity
-  
-
 
 
 

@@ -1,0 +1,10 @@
+*.env
+*.csv
+*venv
+*.venv
+*.pyc
+*__pycache__/
+*.pth
+*.whl
+*.cfg
+*.pyc

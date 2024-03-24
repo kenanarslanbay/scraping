@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estates Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+        td img {
+            width: 50px; /* Adjust based on your preference */
+            height: auto;
+            border-radius: 5px;
+            margin-right: 5px; /* Keep a small gap between images */
+        }
+        .price {
+            font-weight: bold;
+            color: #28a745;
+        }
+        @media (max-width: 600px) {
+            td {
+                display: block;
+                text-align: right;
+            }
+            td:before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .table-container {
+                border: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Estates for Sale</h1>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Image</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for estate in estates %}
+                    <tr>
+                        <td data-label="Title">{{ estate.title }}</td>
+                        <td data-label="Image">
+                            {% for img_url in estate.image_urls %}
+                                <a href="{{ img_url }}" target="_blank"><img src="{{ img_url }}" alt="Estate"></a>
+                            {% endfor %}
+                        </td>
+                        <td data-label="Price" class="price">{{ estate.price }} CZK</td> 
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
