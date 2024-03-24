@@ -1,5 +1,5 @@
 *.env
-*.csv
+#*.csv
 *venv
 *.venv
 *.pyc
