@@ -26,17 +26,17 @@ cd estate_scrape/ # It should be in place where you start you Scrapy project!
 scrapy crawl sreality
 
 # Initializing the Database and Web App with Docker
-cd ../../
+cd ../
 docker-compose up --build
 
 # Ingesting Data into the Database
-python python ingest_data.py
+python ingest_data.py
 ```
 
 ### Notes
 
 - Scraping implemented via API due to the complex structure of the target site(s), API calls are made where possible to efficiently retrieve data in desired formats.
-- Scraped data is initially stored temporarily for quality assurance before being ingested into the PostgreSQL database, ensuring high data integrity
+- Scraped data is initially stored temporarily for quality assurance before being ingested into the PostgreSQL database, ensuring high data integrity.
 
 
 
